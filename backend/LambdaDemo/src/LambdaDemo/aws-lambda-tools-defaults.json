@@ -9,16 +9,13 @@
     "profile"     : "luis-dev",
     "region"      : "us-east-1",
     "configuration" : "Release",
-    "function-runtime" : "dotnet6",
-    "function-memory-size" : 256,
-    "function-timeout"     : 30,
-    "function-handler"     : "LambdaDemo::LambdaDemo.DemoFunction::DemoFunctionHandler",
-    "framework"            : "net6.0",
-    "function-name"        : "LambdaDemo",
-    "function-description" : "",
-    "package-type"         : "Zip",
+    "framework"     : "net6.0",
+    "package-type"  : "Zip",
     "function-architecture" : "x86_64",
     "tracing-mode"          : "PassThrough",
     "environment-variables" : "",
-    "image-tag"             : ""
+    "image-tag"             : "",
+    "template"              : "serverless.tem",
+    "s3-bucket"             : "luisdev-code",
+    "stack-name"            : "tiny-pocker-back"
 }

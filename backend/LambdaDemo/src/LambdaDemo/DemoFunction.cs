@@ -42,4 +42,10 @@ public class DemoFunction
             Body = JsonSerializer.Serialize(users)
         };
     }
+
+
+    public string ToUpper(string input, ILambdaContext context)
+    {
+        return input?.ToUpper();
+    }
 }
