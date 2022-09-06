@@ -11,6 +11,11 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddTransient<IRoomService, RoomService>();
 
+builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
+{
+    builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
+}));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -21,6 +26,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseAuthorization();
+app.UseCors("corsapp");
 
 app.MapControllers();
 
