@@ -1,0 +1,38 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Transform": "AWS::Serverless-2016-10-31",
+  "Description": "Test Project AWS Serverless Application.",
+  "Parameters": {},
+  "Resources": {
+    "DemoFunction": {
+      "Type": "AWS::Serverless::Function",
+      "Properties": {
+        "Handler": "LambdaDemo::LambdaDemo.DemoFunction::DemoFunctionHandler",
+        "Runtime": "net6.0",
+        "CodeUri": "",
+        "Description": "Demo Function",
+        "MemorySize": 256,
+        "Timeout": 30,
+        "Role": null,
+        "Policies": [
+          "AWSLambdaFullAccess"
+        ]
+      }
+    },
+    "ToUpper": {
+      "Type": "AWS::Serverless::Function",
+      "Properties": {
+        "Handler": "LambdaDemo::LambdaDemo.DemoFunction::ToUpper",
+        "Runtime": "net6.0",
+        "CodeUri": "",
+        "Description": "ToUpper Function",
+        "MemorySize": 256,
+        "Timeout": 30,
+        "Role": null,
+        "Policies": [
+          "AWSLambdaFullAccess"
+        ]
+      }
+    }
+  }
+}
