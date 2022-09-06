@@ -11,10 +11,16 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddTransient<IRoomService, RoomService>();
 
-builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
+var MyAllowSpecificOrigins = "corsapp";
+builder.Services.AddCors(options =>
 {
-    builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
-}));
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      policy =>
+                      {
+                          policy.WithOrigins("http://127.0.0.1:5173",
+                                             "https://tiny-pocker.s3.amazonaws.com");
+                      });
+});
 
 var app = builder.Build();
 
@@ -26,7 +32,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseAuthorization();
-app.UseCors("corsapp");
+app.UseCors(MyAllowSpecificOrigins);
 
 app.MapControllers();
 

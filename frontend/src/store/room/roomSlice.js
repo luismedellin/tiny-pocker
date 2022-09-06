@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 export const roomSlice = createSlice({
-    name: 'room',
+    name: 'room',   
     initialState: {
         counter: 10
     },
