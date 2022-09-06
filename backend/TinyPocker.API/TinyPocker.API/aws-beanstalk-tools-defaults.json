@@ -1,13 +1,13 @@
 
 {
     "region" : "us-east-1",
-    "configuration" : "Release",
+    "configuration" : "Debug",
     "framework"     : "net6.0",
     "self-contained" : false,
-    "application"    : "TinyPockerAPI",
-    "environment"    : "TinyPockerAPI-prod",
+    "application"    : "TinyPocker",
+    "environment"    : "Tinypocker-env",
     "enable-xray"    : false,
-    "enhanced-health-type" : "basic",
+    "enhanced-health-type" : "enhanced",
     "additional-options"   : "",
     "solution-stack"       : "64bit Amazon Linux 2 v2.3.5 running .NET Core",
     "environment-type"     : "SingleInstance",
