@@ -1,11 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
 import { Welcome } from '../home';
-import { RoomPage } from '../room';
+import { RoomsPage } from '../room';
 
 export const AppRouter = () => {
   return (
     <Routes>
-        <Route path="room" element={ <RoomPage /> } />
+        <Route path="rooms" element={ <RoomsPage /> } />
         <Route path="*" element={ <Welcome /> } />
     </Routes>
   )

@@ -41,9 +41,9 @@ export const Navbar = () => {
                         <li className="nav-item">
                           <NavLink 
                               className={ isActive }
-                              to="/room"
+                              to="/rooms"
                           >
-                              Sala
+                              Salas
                           </NavLink>
                         </li>
                     </ul>

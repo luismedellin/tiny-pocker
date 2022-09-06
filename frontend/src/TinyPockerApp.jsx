@@ -1,14 +1,14 @@
-import { useState } from 'react'
+import { Provider } from 'react-redux'
 import { AppRouter } from './router'
+import { store } from './store'
 import { Navbar } from './ui'
 
 export const TinyPockerApp = () => {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className="TinyPockerApp">
+    <Provider store={ store }>
       <Navbar />
       <AppRouter />
-    </div>
+    </Provider>
   )
 }
