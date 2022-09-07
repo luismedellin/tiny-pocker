@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-const tinyPockerApi = axios.create({
-    baseURL: process.env.REACT_APP_API_TINY_POCKER_URL
+const tinyPokerApi = axios.create({
+    baseURL: process.env.REACT_APP_API_TINY_POKER_URL
 });
 
-tinyPockerApi.interceptors.request.use( config => {
+tinyPokerApi.interceptors.request.use( config => {
 
     config.headers = {
         ...config.headers,
@@ -13,4 +13,4 @@ tinyPockerApi.interceptors.request.use( config => {
     return config;
 })
 
-export default tinyPockerApi;
+export default tinyPokerApi;
